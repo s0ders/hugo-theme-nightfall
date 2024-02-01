@@ -8,23 +8,23 @@
     other = "Home"
 
 [published]
-    other = "published"
+    other = "Published"
 
 [reading_time]
-    other = "reading time"
+    other = "Reading time"
 
 [reading_time_desc]
   one = "1 minute"
   other = "{{ .Count }} minutes"
 
 [authors]
-  other = "authors"
+  other = "Authors"
 
 [tags]
-  other = "tags"
+  other = "Tags"
 
 [categories]
-  other = "categories"
+  other = "Categories"
 
 [and]
   other = "and"
