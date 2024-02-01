@@ -14,12 +14,6 @@
             {{ with .GetTerms "authors" }}
                 {{ partial "taxonomy/authors.html" . }}
             {{ end }}
-            {{ with .GetTerms "categories" }}
-                {{ partial "taxonomy/categories.html" . }}
-            {{ end }}
-            {{ with .GetTerms "tags" }}
-                {{ partial "taxonomy/tags.html" . }}
-            {{ end }}
             {{ if .Site.Params.published | default true }}
                 <dt>{{ i18n "published" }}</dt>
                 {{ $formattedDate := .Date.Format "2006-01-02" }}
@@ -28,6 +22,12 @@
             {{ if .Site.Params.readingTime | default true }}
                 <dt>{{ i18n "reading_time" }}</dt>
                 <dd>{{ i18n "reading_time_desc" .ReadingTime }}</dd>
+            {{ end }}
+            {{ with .GetTerms "categories" }}
+                {{ partial "taxonomy/categories.html" . }}
+            {{ end }}
+            {{ with .GetTerms "tags" }}
+                {{ partial "taxonomy/tags.html" . }}
             {{ end }}
         </dl>
     </section>
