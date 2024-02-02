@@ -27,7 +27,15 @@
                     <time class="postDate" datetime="{{ $formattedDate }}">{{ .Date | time.Format ":date_long" }}</time>
                 </div>
                 <div class="postExcerpt">
-                    <p>{{ .Summary }}</p>
+                    <p>
+                    {{ $summarySplits := split .Content "<!--start-summary-->" }}
+                    {{ if ge (len $summarySplits) 2 }}
+                        <!-- If content has the comment "start-summary", start there -->
+                        {{ index $summarySplits 1 | plainify | truncate 270 }}
+                    {{ else }}
+                        {{ .Summary| markdownify | truncate 270 " [...]" }}
+                    {{ end }}
+                    </p>
                 </div>
             </div>
         </a>
