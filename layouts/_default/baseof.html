@@ -2,9 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-    <title>{{ block "title" . }}
-        {{ .Site.Title }}
-        {{ end }}</title>
+    <title>
+      {{ block "title" . }}
+        {{ .Site.Params.hostname }}
+      {{ end }}
+    </title>
 
     {{ partial "head.html" . }}
 
