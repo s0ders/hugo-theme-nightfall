@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        {{ .Site.Params.hostname }}
+        {{ block "title" . }}
     </title>
 
     {{ partial "head.html" . }}
