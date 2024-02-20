@@ -6,6 +6,12 @@
     font-size: large;
 }
 
+@media screen and (max-width: 600px) {
+    .postWrapper {
+        text-align: left;
+    }
+}
+
 .listWrapper {
     padding: 20px;    
 }
