@@ -6,7 +6,7 @@
     font-size: large;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobileMaxWidth) {
     .postWrapper {
         text-align: left;
     }
