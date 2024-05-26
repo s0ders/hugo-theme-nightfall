@@ -7,3 +7,9 @@
 .indexHeader {
     font-size: 3em;
 }
+
+@media screen and (max-width: $mobileMaxWidth) {
+    .socialNavbar > i {
+        font-size: 2rem;
+    }
+}
