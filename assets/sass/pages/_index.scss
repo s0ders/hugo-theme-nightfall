@@ -8,8 +8,8 @@
     font-size: 3em;
 }
 
-@media screen and (max-width: $mobileMaxWidth) {
-    .socialNavbar > i {
+@media screen and (min-width: $mobileMaxWidth) {
+    .socialNavbar i {
         font-size: 2rem;
     }
 }
