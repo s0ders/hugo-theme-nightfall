@@ -1,11 +1,12 @@
 .indexWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
 }
 
 .indexHeader {
-    font-size: 3em;
+    font-size: 5em;
+    font-family: "Open Sans";
 }
 
 @media screen and (min-width: $mobileMaxWidth) {
