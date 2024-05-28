@@ -8,8 +8,16 @@
 .indexHeader {
     font-size: 5em;
     font-family: "Public Sans";
-    font-weight: bold;
+    padding-left: 1rem;
 }
+
+@media screen and (max-width: $mobileMaxWidth) {
+    .indexHeader {
+        font-size: 3em;
+    }
+}
+
+
 
 @media screen and (min-width: $mobileMaxWidth) {
     .socialNavbar i {
