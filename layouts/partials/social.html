@@ -4,7 +4,9 @@
         <li>
             {{ if isset . "icon" }}
                 <a href="{{ .url | safeURL }}" title="{{ .name }}" {{ if .rel }} rel="{{ .rel }}"{{ end }}>
-                    <i class="{{ .icon }}" aria-hidden="true"></i>
+                    <svg class="feather">
+                        <use href="feather-sprite.svg#{{ .icon }}" />
+                    </svg>
                 </a>
             {{ else }}
                 <a href="{{ .url | safeURL }}" {{ if .rel }} rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
