@@ -12,6 +12,4 @@
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
-{{ partial "custom-head.html" . }}
-
 <script>var _paq=window._paq=window._paq||[];_paq.push(["setDoNotTrack",!0]),_paq.push(["trackPageView"]),_paq.push(["enableLinkTracking"]),function(){var a="//matomo.akira.sh/";_paq.push(["setTrackerUrl",a+"matomo.php"]),_paq.push(["setSiteId","1"]);var e=(t=document).createElement("script"),t=t.getElementsByTagName("script")[0];e.async=!0,e.src=a+"matomo.js",t.parentNode.insertBefore(e,t)}();</script>
