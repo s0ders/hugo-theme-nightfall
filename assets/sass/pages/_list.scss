@@ -3,3 +3,22 @@
 .listHeader, .listContent {
     text-align: left;
 }
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 11.5px;
+  width: 9px;
+  height: 2px;
+  background-color: #f8f8ff;
+}
+
+ul li {
+    font-size: 19px;
+    line-height: 1.6;
+}
