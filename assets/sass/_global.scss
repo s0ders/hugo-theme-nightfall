@@ -25,14 +25,71 @@ pre code {
   font-family: $fontCode;
   font-size: 90%;
   display: block;
-  background: $backgroundDarker;
+  background: $backgroundCodeBlock;
   padding: 10px;
   overflow: auto;
+  border-radius: 5px;
 }
 
 code {
   font-family: $fontCode;
-  font-size: 90%;
+  font-size: $genericFontSize;
+}
+
+code .comment {
+  color: #5c6370 !important;
+}
+code .string {
+  color: #98c379 !important;
+}
+code .variable {
+  color: #e06c75 !important;
+}
+code .variable-2 {
+  color: #e5aa69 !important;
+}
+code .variable-3 {
+  color: #61afef !important;
+}
+code .number {
+  color: #d19a66 !important;
+}
+code .property {
+  color: #61afef !important;
+}
+code .atom {
+  color: #c678dd !important;
+}
+code .keyword {
+  color: #c678dd !important;
+}
+code .builtin {
+  color: #56b6c2 !important;
+}
+code .def {
+  color: #61afef !important;
+}
+code .operator {
+  color: #56b6c2 !important;
+}
+code .meta {
+  color: #abb2bf !important;
+}
+code .tag {
+  color: #e06c75 !important;
+}
+code .attribute {
+  color: #61afef !important;
+}
+code .regexp {
+  color: #98c379 !important;
+}
+code .link {
+  color: #61afef !important;
+}
+
+code .header {
+  color: #e06c63 !important;
 }
 
 @for $i from 1 through 6 {
