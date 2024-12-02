@@ -21,6 +21,10 @@ a {
     }
 }
 
+pre {
+  background: $backgroundDark;
+}
+
 pre code {
   font-family: $fontCode;
   font-size: 90%;

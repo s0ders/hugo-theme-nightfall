@@ -3,6 +3,6 @@
 <dd>
 {{- range $index, $el := . -}}
     <span></span>
-    <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
+    <a href="{{ .RelPermalink }}">~/author/{{- .LinkTitle | lower -}}/</a>
 {{- end -}}
 </dd>
