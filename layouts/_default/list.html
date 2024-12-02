@@ -7,9 +7,9 @@
 <div class="listWrapper">
     <div class="listHeader">
         {{ if eq .Type "tags" }}
-            <h1>~/tags/{{ .Title | lower | replace " " "_" }}/</h1>
+            <h1>~/tags/{{ .Title | lower }}/</h1>
         {{ else }}
-            <h1>~/{{ .Title | lower | replace " " "_" }}/</h1>
+            <h1>~/{{ .Title | lower }}/</h1>
         {{ end }}
     </div>
 
