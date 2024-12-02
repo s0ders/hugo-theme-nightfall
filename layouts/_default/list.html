@@ -6,7 +6,11 @@
 
 <div class="listWrapper">
     <div class="listHeader">
-        <h1>~/{{ .Title | lower }}/</h1>
+        {{ if eq .Type "tags" }}
+            <h1>~/tags/{{ .Title | lower | replace " " "_" }}/</h1>
+        {{ else }}
+            <h1>~/{{ .Title | lower | replace " " "_" }}/</h1>
+        {{ end }}
     </div>
 
     {{ with .Content }}
