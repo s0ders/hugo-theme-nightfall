@@ -15,6 +15,7 @@
 .postWrapper ul li {
     font-size: $genericFontSize;
     line-height: $genericLineHeight;
+    margin-bottom: 1rem;
 }
 
 // Fixes bug where li element after code block are wrapped in a paragraph
