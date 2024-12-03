@@ -40,62 +40,6 @@ code {
   font-size: $genericFontSize;
 }
 
-.chroma .comment {
-  color: #5c6370 !important;
-}
-.chroma .string {
-  color: #98c379 !important;
-}
-.chroma .variable {
-  color: #e06c75 !important;
-}
-.chroma .variable-2 {
-  color: #e5aa69 !important;
-}
-.chroma .variable-3 {
-  color: #61afef !important;
-}
-.chroma .number {
-  color: #d19a66 !important;
-}
-.chroma .property {
-  color: #61afef !important;
-}
-.chroma .atom {
-  color: #c678dd !important;
-}
-.chroma .keyword {
-  color: #c678dd !important;
-}
-.chroma .builtin {
-  color: #56b6c2 !important;
-}
-.chroma .def {
-  color: #61afef !important;
-}
-.chroma .operator {
-  color: #56b6c2 !important;
-}
-.chroma .meta {
-  color: #abb2bf !important;
-}
-.chroma .tag {
-  color: #e06c75 !important;
-}
-.chroma .attribute {
-  color: #61afef !important;
-}
-.chroma .regexp {
-  color: #98c379 !important;
-}
-.chroma .link {
-  color: #61afef !important;
-}
-
-.chroma .header {
-  color: #e06c63 !important;
-}
-
 @for $i from 1 through 6 {
   h#{$i} {
     font-family: $fontHeader;
