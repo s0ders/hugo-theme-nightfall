@@ -62,11 +62,6 @@ pre:hover .copy-code-button {
   opacity: 1;
 }
 
-.copy-code-button.copied {
-  background-color: #4CAF50;
-  color: white;
-}
-
 @for $i from 1 through 6 {
   h#{$i} {
     font-family: $fontHeader;

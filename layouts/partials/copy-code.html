@@ -14,11 +14,9 @@
                 navigator.clipboard.writeText(code).then(() => {
                     // Temporary style change to indicate successful copy
                     button.textContent = 'Copied!';
-                    button.classList.add('copied');
 
                     setTimeout(() => {
                         button.textContent = copyButtonLabel;
-                        button.classList.remove('copied');
                     }, 2000);
                 }).catch(err => {
                     console.error('Failed to copy:', err);
