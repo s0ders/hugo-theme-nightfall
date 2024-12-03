@@ -16,7 +16,7 @@
             use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
 
             // Append use to svg
-            svg.appendChild(use);
+            // svg.appendChild(use);
 
             // Create text span
             const buttonText = document.createElement('span');
@@ -32,14 +32,12 @@
                     // Change SVG icon to check-circle
                     use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#check-circle');
 
-                    buttonText.textContent = 'Copied!';
                     button.classList.add('copied');
 
                     setTimeout(() => {
                         // Change back to clipboard icon
                         use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
 
-                        buttonText.textContent = 'Copy';
                         button.classList.remove('copied');
                     }, 2000);
                 }).catch(err => {
