@@ -46,18 +46,10 @@ code {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 3px 10px;
-  font-size: 0.8rem;
   color: whitesmoke;
-  border-radius: 8px;
   cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.2s ease-in-out;
-}
-
-pre:hover .copy-code-button {
-  background-color: #393f4d;
-  border: 1px solid #393f4d;
+  background-color: transparent;
+  border: transparent;
 }
 
 .copy-code-button .feather {
@@ -65,7 +57,9 @@ pre:hover .copy-code-button {
   height: 20px;
 }
 
-.copy-code-button.copied {
+.copy-code-button.copied .feather {
+  width: 20px;
+  height: 20px;
   color: #4CAF50;
 }
 
