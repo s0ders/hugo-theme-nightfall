@@ -1,0 +1,42 @@
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const copyButtonLabel = 'Copy';
+
+        // Function to create copy buttons
+        function createCopyButton(codeBlock) {
+            const button = document.createElement('button');
+            button.classList.add('copy-code-button');
+            button.textContent = copyButtonLabel;
+
+            button.addEventListener('click', () => {
+                // Copy the text content of the code block
+                const code = codeBlock.textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    // Temporary style change to indicate successful copy
+                    button.textContent = 'Copied!';
+                    button.classList.add('copied');
+
+                    setTimeout(() => {
+                        button.textContent = copyButtonLabel;
+                        button.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            });
+
+            return button;
+        }
+
+        // Find all pre code blocks
+        const codeBlocks = document.querySelectorAll('pre > code');
+
+        codeBlocks.forEach(codeBlock => {
+            const pre = codeBlock.parentNode;
+            pre.style.position = 'relative';
+
+            const copyButton = createCopyButton(codeBlock);
+            pre.appendChild(copyButton);
+        });
+    });
+</script>

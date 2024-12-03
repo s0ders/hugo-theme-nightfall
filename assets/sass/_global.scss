@@ -21,8 +21,10 @@ a {
     }
 }
 
+// Code
 pre {
   background: $backgroundDark !important;
+  position: relative;
 }
 
 pre code {
@@ -38,6 +40,29 @@ pre code {
 code {
   font-family: $fontCode;
   font-size: $genericFontSize;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+pre:hover .copy-code-button {
+  opacity: 1;
+}
+
+.copy-code-button.copied {
+  background-color: #4CAF50;
+  color: white;
 }
 
 @for $i from 1 through 6 {
