@@ -1,22 +1,31 @@
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-        const copyButtonLabel = 'Copy';
 
         // Function to create copy buttons
         function createCopyButton(codeBlock) {
             const button = document.createElement('button');
             button.classList.add('copy-code-button');
-            button.textContent = copyButtonLabel;
+
+            // Create SVG element
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.classList.add('feather');
+
+            // Create use element
+            const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+            use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
+
+            // Append use to svg
+            svg.appendChild(use);
 
             button.addEventListener('click', () => {
                 // Copy the text content of the code block
                 const code = codeBlock.textContent;
                 navigator.clipboard.writeText(code).then(() => {
                     // Temporary style change to indicate successful copy
-                    button.textContent = 'Copied!';
+                    use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#check-circle');
 
                     setTimeout(() => {
-                        button.textContent = copyButtonLabel;
+                        use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
                     }, 2000);
                 }).catch(err => {
                     console.error('Failed to copy:', err);
