@@ -1,7 +1,6 @@
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
 
-        // Function to create copy buttons
         function createCopyButton(codeBlock) {
             const button = document.createElement('button');
             button.classList.add('copy-code-button');
@@ -17,14 +16,17 @@
             // Append use to svg
             svg.appendChild(use);
 
+            // Append icon and text to button
+            button.appendChild(svg);
+
             button.addEventListener('click', () => {
-                // Copy the text content of the code block
                 const code = codeBlock.textContent;
                 navigator.clipboard.writeText(code).then(() => {
-                    // Temporary style change to indicate successful copy
+                    // Change SVG icon to check-circle
                     use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#check-circle');
 
                     setTimeout(() => {
+                        // Change back to clipboard icon
                         use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
                     }, 2000);
                 }).catch(err => {
