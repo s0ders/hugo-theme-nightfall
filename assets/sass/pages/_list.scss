@@ -16,3 +16,9 @@
     font-size: $genericFontSize;
     line-height: $genericLineHeight;
 }
+
+// Fixes bug where li element after code block are wrapped in a paragraph
+.postWrapper ul li p {
+  all: unset;
+  display: inline;
+}
