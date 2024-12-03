@@ -13,17 +13,17 @@
 
             // Create use element
             const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
-            use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
+            use.setAttributeNVS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
 
             // Append use to svg
-            // svg.appendChild(use);
+            svg.appendChild(use);
 
             // Create text span
             const buttonText = document.createElement('span');
             buttonText.textContent = 'Copy';
 
             // Append icon and text to button
-            button.appendChild(svg);
+            // button.appendChild(svg);
             button.appendChild(buttonText);
 
             button.addEventListener('click', () => {
