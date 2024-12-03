@@ -46,14 +46,15 @@ code {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 5px 10px;
+  padding: 3px 10px;
   font-size: 0.8rem;
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-color: #393f4d;
+  border: 1px solid #393f4d;
+  border-radius: 8px;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.2s ease-in-out;
+  font-family: "Nunito",open sans,sans-serif;
 }
 
 pre:hover .copy-code-button {

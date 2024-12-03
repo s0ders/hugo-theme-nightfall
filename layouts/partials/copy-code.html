@@ -6,18 +6,40 @@
         function createCopyButton(codeBlock) {
             const button = document.createElement('button');
             button.classList.add('copy-code-button');
-            button.textContent = copyButtonLabel;
+
+            // Create SVG element
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.classList.add('feather');
+
+            // Create use element
+            const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+            use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
+
+            // Append use to svg
+            svg.appendChild(use);
+
+            // Create text span
+            const buttonText = document.createElement('span');
+            buttonText.textContent = 'Copy';
+
+            // Append icon and text to button
+            button.appendChild(svg);
+            button.appendChild(buttonText);
 
             button.addEventListener('click', () => {
-                // Copy the text content of the code block
                 const code = codeBlock.textContent;
                 navigator.clipboard.writeText(code).then(() => {
-                    // Temporary style change to indicate successful copy
-                    button.textContent = 'Copied!';
+                    // Change SVG icon to check-circle
+                    use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#check-circle');
+
+                    buttonText.textContent = 'Copied!';
                     button.classList.add('copied');
 
                     setTimeout(() => {
-                        button.textContent = copyButtonLabel;
+                        // Change back to clipboard icon
+                        use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'feather-sprite.svg#clipboard');
+
+                        buttonText.textContent = 'Copy';
                         button.classList.remove('copied');
                     }, 2000);
                 }).catch(err => {
